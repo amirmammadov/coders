@@ -69,6 +69,7 @@ function findNonRepeated(s) {
 
   for (let i = 0; i < s.length; i++) {
     let num = arr.filter((item) => item === s[i]);
+    console.log(num);
     if (num.length === 1) {
       return s[i];
     }
@@ -77,8 +78,8 @@ function findNonRepeated(s) {
   return;
 }
 
-console.log(findIntersection([1, 2, 3, 3, 4], [3, 3, 4, 6]));
-console.log(checkPalindrome("abba"));
-console.log(checkPrime(4));
-console.log(isPositive(-2));
-console.log(findNonRepeated("bbac"));
+// console.log(findIntersection([1, 2, 3, 3, 4], [3, 3, 4, 6]));
+// console.log(checkPalindrome("abba"));
+// console.log(checkPrime(4));
+// console.log(isPositive(-2));
+console.log(findNonRepeated("bba"));
