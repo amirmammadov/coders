@@ -112,8 +112,8 @@ function canPlaceFlowers(flowerbed, n) {
 }
 
 console.log(sortingArray([1, 4, 28, 2, 7, 9, 13]));
+console.log(withdraw(1900));
 console.log(sortingSentence("is2 sentence4 This1 a3"));
 console.log(strictlyIncreasing([1, 2, 10, 5, 7]));
 console.log(searchInsertPosition([1, 3, 5, 6], 5));
 console.log(canPlaceFlowers([1, 0, 0, 0, 1], 1));
-console.log(withdraw(1900));
