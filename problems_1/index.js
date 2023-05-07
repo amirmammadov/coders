@@ -3,10 +3,11 @@ function sortingArray(num) {
   let even = [];
 
   for (let i = 0; i < num.length; i++) {
-    if (num[i] % 2 !== 0) {
-      odd.push(num[i]);
+    let element = num[i];
+    if (element % 2 !== 0) {
+      odd.push(element);
     } else {
-      even.push(num[i]);
+      even.push(element);
     }
   }
 
@@ -22,15 +23,24 @@ function sortingArray(num) {
 }
 
 function withdraw(amount) {
+  if (amount === 0) {
+    return;
+  }
+
   const ranks = [500, 200, 100, 50, 20, 10, 5];
   const result = [];
   for (let i = 0; i < ranks.length; i++) {
+    if (amount === 0) {
+      break;
+    }
+
     const rank = ranks[i];
     while (amount >= rank) {
       result.push(rank);
       amount -= rank;
     }
   }
+
   return result;
 }
 
@@ -71,19 +81,21 @@ function strictlyIncreasing(num) {
 }
 
 function searchInsertPosition(num, target) {
-  let low = 0;
-  let high = num.length - 1;
+  let left = 0;
+  let right = num.length - 1;
 
-  while (low <= high) {
-    const mid = Math.floor((low + high) / 2);
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
     if (num[mid] === target) {
       return mid;
     } else if (num[mid] < target) {
-      low = mid + 1;
+      left = mid + 1;
     } else {
-      high = mid - 1;
+      right = mid - 1;
     }
   }
+
+  return left;
 }
 
 function canPlaceFlowers(flowerbed, n) {
